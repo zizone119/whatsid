@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+    
+      h1 + h2 {
+        color: red;
+      }
+      h3:hover {
+        color: blue;
+      }
+      h1:first-of-type{
+        color: red;
+      }
+      h1:last-of-type{
+        color: blue;
+      }
+      p{counter-increment: num;}
+      p::before{content: counter(num) ".";}
+      p::after{content: "-" attr(pnum) " page";}
+      p::first-letter{
+        font-size: 50px;
+      }
+      p::first-line{
+        color: red;
+      }
+      p::selection{
+        background: black;
+        color: red;
+      }
+      a{
+        text-decoration: none;
+      }
+      a:link::after{content: " - " attr(href);}
+      .a{
+        visibility: hidden;
+      }
+      #aa{
+        background-color: black;
+        color: white;
+        opacity: 0.2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>HTML5</h1>
+    <h2>HTML5</h2>
+    <h3>HTML5</h3>
+    <h3>HTML5</h3>
+    <h2>HTML5</h2>
+    <h1>HTML5</h1>
+    <p pnum="52">For weeks, the roads around Islamabad have been lined by shipping containers; road blocks ready for immediate deployment in the event of any protest.
+        Pakistan’s capital has become used to entire areas being sealed off whenever the authorities get an inkling that unrest could be brewing. It is a constant reminder to the city’s residents that at any moment, everything could tip.
+    </p>
+    <p pnum="53">For weeks, the roads around Islamabad have been lined by shipping containers; road blocks ready for immediate deployment in the event of any protest.
+        Pakistan’s capital has become used to entire areas being sealed off whenever the authorities get an inkling that unrest could be brewing. It is a constant reminder to the city’s residents that at any moment, everything could tip.
+    <hr>
+    <h1><a href="http://www.naver.com">네이버</a></h1>
+    <h1><a href="http://www.daum.net">다음</a></h1>
+    <hr>
+    <div class="a">1</div>
+    <div  id="aa">2</div>
+    <div class="a">3</div>
+    <div>4</div>
+</html>

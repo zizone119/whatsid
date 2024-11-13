@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const select = document.querySelector("select");
+        const p = document.querySelector("p");
+        select.addEventListener("change", (event) => {
+          const options = event.currentTarget.options;
+          const list=[];
+          for(const option of options){
+            if(option.selected){
+                list.push(option.textContent);
+            }
+          }
+          p.textContent=`${list.join(',')}`;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <select multiple>
+      <option>a</option>
+      <option>b</option>
+      <option>c</option>
+      <option>d</option>
+    </select>
+    <p></p>
+  </body>
+</html>

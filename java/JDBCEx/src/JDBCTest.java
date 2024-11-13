@@ -1,0 +1,37 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class JDBCTest {
+
+	public static void main(String[] args) {
+		Connection conn;
+		Statement stmt;
+		ResultSet rs;
+		
+		String url="jdbc:mysql://localhost:3306/haksa";
+		String id = "root";
+		String pw = "1234";
+		
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			conn = DriverManager.getConnection(url,id,pw);
+			stmt = conn.createStatement();
+			
+		//	stmt.executeUpdate("insert into student values(20245112,'blackpink','music',100)");
+			stmt.executeUpdate("delete from student where name='blackpink'");
+			rs = stmt.executeQuery("select * from student");
+			while(rs.next()) {
+				int hakbun = rs.getInt(1);
+				String name = rs.getString(2);
+				String dept = rs.getString(3);
+				int score = rs.getInt(4);
+				System.out.println(hakbun + " " + name + " " + dept + " " + score);
+			}
+		}catch (Exception e) {
+			System.out.println("not connected");
+		}
+	}
+
+}

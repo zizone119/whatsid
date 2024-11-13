@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      em {
+        position: absolute;
+        display: block;
+        top: 100px;
+        left: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="post-list">
+      <li id="post-1">Item 1</li>
+      <li id="post-2">Item 2</li>
+      <li id="post-3">Item 3</li>
+      <li id="post-4">Item 4</li>
+      <li id="post-5">Item 5</li>
+      <li id="post-6">Item 6</li>
+    </ul>
+    <p class="msg">msg</p>
+    <script>
+      const msg = document.querySelector(".msg");
+      const list = document.querySelector('ul#post-list');
+      list.addEventListener('click',(e)=>{
+        console.log('target : ' + e.target);
+        console.log('target : ' + e.target.nodeName);
+        if(e.target && e.target.nodeName === "LI"){
+            msg.innerHTML = 'li#'+e.target.id+' was clicked';
+        }
+      })
+    </script>
+  </body>
+</html>

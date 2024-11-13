@@ -1,0 +1,17 @@
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.Scanner;
+
+public class Delete {
+	public Delete() {
+		String name="";
+		Scanner in = new Scanner(System.in);
+		System.out.println("삭제할 이름을 입력하세요.");
+		name = in.nextLine();
+		Connection con = null;
+		PreparedStatement pstmt=null;
+		con=DBConnect.getConnection();
+		String sql = "delete from sungjuk where name=?";
+	}
+}

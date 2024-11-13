@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Update {
+	public Update() {
+		String name = "";
+		int kuk, eng, mat, tot, avg;
+		String etc = "";
+		Scanner in = new Scanner(System.in);
+		System.out.println("수정할 이름을 입력하세요.");
+		name = in.nextLine();
+		System.out.println("변경할 국어:");
+		kuk = in.nextInt();
+		System.out.println("변경할 영어:");
+		eng = in.nextInt();
+		System.out.println("변경할 수학:");
+		mat = in.nextInt();
+		System.out.println("변경할 기타:");
+		etc = in.nextLine();
+	}
+}

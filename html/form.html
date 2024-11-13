@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>폼 형식</h1>
+    <form>
+        <fieldset>
+            <legend>기본입력</legend>
+        아이디 : <input type="text" value="zizone" readonly><br>
+        이름 : <input type="text" placeholder="꼭 영문으로 기재해 주세요." required><br>
+        비밀번호 : <input type="password"><br>
+        파일첨부 : <input type="file"><br>
+        </fieldset>
+        <fieldset>
+            <legend>선택입력</legend>
+        색깔선택 : <input type="color"><br>
+        날짜 : <input type="date"><br>
+        날짜 상세히 : <input type="datetime-local"><br>
+        이메일 : <input type="email"><br>
+        전화번호 : <input type="tel"><br>
+        해당월입력 : <input type="month"><br>
+        해당주입력 : <input type="week"><br>
+        시간입력 : <input type="time"><br>
+        url입력 : <input type="url"><br>
+        숫자세기 : <input type="number"><br>
+        검색 : <input type="search"><br>
+        </fieldset>
+        &nbsp;<input type="submit" name="제출">
+        <fieldset>
+            <legend>추가입력</legend>
+        <textarea rows="6" cols="80"></textarea><br>
+        <select>
+            <option>김밥</option>
+            <option>라면</option>
+            <option>떡복이</option>
+            <option>순대</option>
+        </select>
+        <br>
+        <select multiple>
+            <option>김밥</option>
+            <option>라면</option>
+            <option>떡복이</option>
+            <option>순대</option>
+        </select>
+        <br>
+        <select>
+            <optgroup label="프론트">
+                <option>HTML</option>
+                <option>CSS</option>
+                <option>Java Script</option>
+            </optgroup>
+            <optgroup label="백앤드">
+                <option>Java</option>
+                <option>Python</option>
+                <option>C#</option>
+            </optgroup>
+        </select>
+        </fieldset>
+
+    </form>
+    <br>
+    <form>
+        <h3>수강 분야(수강 선택)</h3>
+        <ul>
+            <li><input type="checkbox">문법</li>
+            <li><input type="checkbox">작문</li>
+            <li><input type="checkbox">독해</li>
+        </ul>
+        <h3>수강 분야(수강 선택)</h3>
+        <ul>
+            <label><li><input type="checkbox">문법</li></label>
+            <label><li><input type="checkbox">작문</li></label>
+            <label><li><input type="checkbox">독해</li></label>
+        </ul>
+    </form>
+    <hr>
+    <h3>회원가입</h3>
+    <form>
+        <fieldset>
+            <legend>필수 정보</legend>
+            이름 : <input type="text">
+        </fieldset>
+        <fieldset>
+            <legend>선택 정보</legend>
+            생일 : <input type="date">
+        </fieldset>
+    </form>
+</body>
+</html>

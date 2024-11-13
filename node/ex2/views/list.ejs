@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>연락 리스트</h1>
+    <% data.forEach(i=>{ %>
+    <div>
+      <h3>이름 : <%=i.name%></h3>
+      <h3>이메일 : <%=i.email%></h3>
+      <h3>연락처 : <%=i.phone%></h3>
+      <button class="delete btn btn-outline-danger" data-id="<%= i._id %>">
+        삭제
+      </button>
+      <hr />
+    </div>
+    <%});%>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+      $(".delete").click(function (e) {
+        let sid = e.target.dataset.id;
+        let item = $(this);
+        $.ajax({
+          type: "post",
+          url: "/delete",
+          data: { _id: sid },
+        })
+          .done(function (result) {
+            item.parent("div").remove();
+          })
+          .fail(function (xhr, textStatus, errorThrown) {
+            console.log("게시물 삭제 실패");
+            console.log(xhr, textStatus, errorThrown);
+          });
+      });
+    </script>
+  </body>
+</html>

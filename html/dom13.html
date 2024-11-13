@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        let [timer, timerId] = [0, 0];
+        const h1 = document.querySelector("h1");
+        const ckbox = document.querySelector("input");
+        ckbox.addEventListener("change", () => {
+          if (event.currentTarget.checked) {
+            timerId = setInterval(() => {
+              timer++;
+              h1.textContent = `${timer / 10.0} seconds`;
+            }, 100);
+          } else {
+            clearInterval(timerId);
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <input type="checkbox" />
+    <span>Timer activated</span>
+    <h1></h1>
+  </body>
+</html>

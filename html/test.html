@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>이벤트</title>
+  </head>
+  <style>
+    p {
+      margin: 0;
+      padding: 0;
+      display: block;
+      position: absolute;
+    }
+  </style>
+  <body>
+    <p id="pos" onclick="f(event)">position</p>
+    <script>
+      function f(e){
+        alert(e.target);
+      }
+    </script>
+    
+  </body>
+  <script></script>
+</html>

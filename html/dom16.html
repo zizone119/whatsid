@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            let status = false;
+            const ckbox=document.querySelector('input');
+            ckbox.addEventListener('change',(event)=>{            
+                status=event.target.checked;
+            })
+            const link=document.querySelector('a');
+            link.addEventListener('click',(event)=>{
+                if(!status){
+                    event.preventDefault();
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <input type="checkbox"    >
+    <span>Link activated</span>
+    <br>
+    <a href="http://hanbit.co.kr">Hanbit Media</a>
+</body>
+</html>

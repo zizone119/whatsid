@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const pet = {
+        name: "Cloud",
+        eat: function (food) {
+          alert(name + " eats " + food);
+        }
+      };
+      console.log(pet.eat('meal'));
+
+      const student = {};
+      student.name = "andy";
+      student.hobby = "instrument";
+      student.job = "bio-engineer";
+      console.log(JSON.stringify(student, null, 2));
+      delete student.job;
+      console.log(JSON.stringify(student, null, 2));
+
+      const obj = {
+        a: function () {
+          console.log(this);
+        },
+        b: () => {
+          console.log(this);
+        },
+      };
+      obj.a();
+      obj.b();
+
+      const object = {
+        ko: "빵",
+        es: "pan",
+        lang: {
+          es: "스페인어",
+        },
+        print: function (lang) {
+          console.log(`${this.ko}는 ${this.lang[lang]}로 ${this[lang]}입니다.`);
+        },
+      };
+      object.print("es");
+
+      const f = new Number(273);
+      f.cnt = 10;
+      console.log(f);
+      console.log(typeof f);
+      console.log(f.cnt);
+      console.log(f + 1);
+      console.log(f.valueOf());
+
+      const str = "Hello";
+      console.log(str.indexOf("He"));
+      console.log(str.indexOf("lo"));
+      console.log(str.includes("el"));
+      console.log(str.lastIndexOf("l"));
+
+      const float = 123.7654321;
+      console.log(float.toFixed(2));
+      console.log(float.toFixed(3));
+      console.log(float.toFixed(4));
+      console.log(isNaN("a"));
+      console.log(isFinite(Infinity));
+
+
+    </script>
+  </body>
+</html>

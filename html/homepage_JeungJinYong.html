@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ultimate BlockChain</title>
+    <!--initial-->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font: normal 12px "Dotum";
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      body {
+        width: 980px;
+        margin: 0 auto;
+        background: linear-gradient(to bottom, black, white 50%);
+        background-attachment: fixed;
+      }
+
+      img {
+        border: 0;
+      }
+    </style>
+
+    <!--header-->
+    <style>
+      header {
+        width: 100%;
+        margin: 0 auto;
+        padding: 10px;
+        overflow: hidden;
+        height: 100px;
+      }
+      header > h1 {
+        padding-left: 10px;
+        font-size: 60px;
+        letter-spacing: 4px;
+        text-shadow: 0 0 4px #ccc, 0 -5px 4px #ff3, 2px -10px 6px #fd3,
+          -2px -15px 11px #f80, 2px -19px 18px #f20;
+        color: #000;
+        line-height: 100px;
+        font-style: italic;
+      }
+
+      aside {
+        position: relative;
+        width: 300px;
+
+        float: left;
+        background-color: white;
+      }
+
+      aside > img {
+        width: 250px;
+        margin: 25px;
+      }
+
+      aside > nav {
+        margin: 0px 15px 15px 15px;
+      }
+
+      aside > nav > ul {
+        padding: 10px;
+      }
+
+      aside > nav > ul > li {
+        margin-bottom: 30px;
+      }
+      aside > nav > ul > li > a {
+        display: block;
+        font-weight: bold;
+        font-size: 3em;
+        color: #f20;
+        padding: 30px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        font-family: Arial;
+      }
+      aside > nav > ul > li > a:hover {
+        color: white;
+      }
+
+      section {
+        width: 580px;
+        float: left;
+        background-color: rgb(236, 218, 218);
+        padding: 30px;
+        height: auto;
+      }
+
+      section > p {
+        font-size: 2em;
+      }
+
+      footer {
+        clear: both;
+        height: 50px;
+        padding: 20px 0;
+        background-color: #061f1f;
+        color: white;
+        text-align: center;
+      }
+
+      section > span > h1 {
+        text-align: center;
+        font-size: 3em;
+        padding: 30px;
+        font-weight: bolder;
+      }
+
+      section > p {
+        font-weight: bold;
+        line-height: 30px;
+      }
+
+      section > span > h2 {
+        text-align: right;
+        font-style: italic;
+        font-size: 1.5em;
+      }
+
+      #end {
+        font-size: 30px;
+      }
+      a {
+        transition: 1s;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Ultimate BlockChain</h1>
+    </header>
+
+    <aside>
+      <img src="./image/bc_pf.jpg" />
+      <nav>
+        <ul>
+          <li><a href="#" onmouseover="colroChange(this)">about</a></li>
+          <li><a href="#" onmouseover="colroChange(this)">product</a></li>
+          <li><a href="#" onmouseover="colroChange(this)">order</a></li>
+          <li><a href="#" onmouseover="colroChange(this)">contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <section>
+      <span><h1>What is blockchain?</h1></span>
+      <p>
+        &nbsp;Blockchain is a ledger management technology based on distributed
+        computing technology that stores small data called 'blocks' in a
+        chain-like connection-based distributed data storage environment based
+        on the P2P method, so that no one can arbitrarily modify them and anyone
+        can view the results of the changes . It is fundamentally a form of
+        distributed data storage technology, and is designed to prevent
+        arbitrary manipulation by the operator of a distributed node as a change
+        list that continuously records changing data on all participating nodes
+        . Blockchain technology is used for most cryptocurrency transactions,
+        including Bitcoin . Since the cryptocurrency transaction process is
+        written in a decentralized electronic ledger, servers are operated on
+        each computer of many users running the blockchain software , allowing
+        free transactions between individuals without a central bank.
+      </p>
+      <span><h2>- Wikipedia</h2></span>
+    </section>
+    <footer>
+      <address id="end">@ Ultimate BlockChian 2024</address>
+    </footer>
+  </body>
+  <script>
+    function colroChange(obj) {
+      let color = "#";
+      for (let i = 1; i <= 6; i++) {
+        const num = Math.round(Math.random() * 10).toString(16);
+        color += num;
+      }
+      obj.style.backgroundColor = color;
+    }
+  </script>
+</html>

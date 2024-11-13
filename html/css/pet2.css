@@ -1,0 +1,108 @@
+body{
+    font-family: "맑은 고딕", "고딕", "굴림";
+}
+
+#wrapper{
+    width: 800px;
+    margin: 0 auto;
+}
+
+header{
+    width: 100%;
+    background-color: #f46075;
+    height: 150px;
+    background-image: url(../image/nav2.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+header nav{
+    width: 70%;
+    float: left;
+    margin-top: 50px;
+}
+
+nav ul{
+    list-style: none;
+   
+}
+
+nav ul li{
+    float: left;
+    margin: 15px;
+    font-weight: bold;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    color: yellow;
+}
+
+h2{
+    font-size: 1.5em;
+}
+
+section{
+    width: 580px;
+    float: left;
+    padding: 5px;
+}
+
+section article{
+    width: 250px;
+    height: 250px;
+    float: left;
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+p{
+    font-size: 12px;
+    line-height: 20px;
+}
+
+aside{
+    width: 200px;
+    float: right;
+    margin-top: 80px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+footer{
+    clear: both;
+    width: 800px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.at1:hover{
+    background-color: #cf9;
+    border: 1px solid green;
+}
+
+.at2:hover{
+    background-color: #f46075;
+    border: 1px solid yellow;
+}
+
+.at3:hover{
+    background-color: #ccc;
+    border: 1px solid orange;
+}
+
+.at4:hover{
+    background-color: #fc3;
+    border: 1px solid red;
+}
+
+.at1, .at2, .at3, .at4{
+    transition: 2s;
+}

@@ -1,0 +1,20 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class JDBCTest {
+
+	public static void main(String[] args) {
+		Connection conn;
+		String url="jdbc:mysql://localhost:3396/haksa";
+		String id = "root";
+		String pw = "1234";
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			conn = DriverManager.getConnection(url,id,pw);
+			System.out.println("connected");
+		}catch (Exception e) {
+			System.out.println("not connected");
+		}
+	}
+
+}

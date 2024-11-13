@@ -1,0 +1,56 @@
+package ch10;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Scanner;
+
+class StudentList1 {
+	private String name,major;
+	private int num;
+	private double avg;
+
+	public StudentList1(String name, String major, int num, double avg) {
+		this.name = name;
+		this.major = major;
+		this.num = num;
+		this.avg = avg;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+	
+	public String getMajor() {
+		return this.major;
+	}
+
+	public int getNum() {
+		return this.num;
+	}
+
+	public double getAvg() {
+		return this.avg;
+	}
+}
+
+public class StudentListEx {
+
+	public static void main(String[] args) {
+		ArrayList<StudentList1> sl = new ArrayList<StudentList1>();
+		
+		sl.add(new StudentList1 ("황기태","모바일", 1, 4.1));
+		sl.add(new StudentList1 ("이재문","안드로이드", 2, 3.9));
+		sl.add(new StudentList1 ("김남윤","웹공학", 3, 4.25));
+		sl.add(new StudentList1 ("최찬미","빅데이터", 4, 3.5));
+		System.out.println(sl);
+		/*Scanner sc = new Scanner(System.in);
+		while(true) {
+			System.out.print("학생 이름 >> ");
+			String name=sc.next();
+			if(name.equals("그만")) break;
+			StudentList1 stu = 
+			System.out.println(name+","+sl.getMajor()+","+sl.getNum()+","+sl.getAvg());
+		}*/
+	}
+
+}

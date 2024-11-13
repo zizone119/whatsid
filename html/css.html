@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: blue;
+            font-size: 60px;
+        }
+        #a{
+            color: chartreuse;
+        }
+        .b{
+            color: fuchsia;
+        }
+        input[type=text]{
+            background: red;
+        }
+        input[type=password]{
+            background: blue;
+        }
+        img[src$=png]{
+            border: 3px solid red;
+        }
+        img[src$=jpg]{
+            border: 3px solid blue;
+        }
+        #car > h1{
+            color: yellow;
+        }
+        #fruit > h1{
+            color: blanchedalmond;
+        }
+        #c h1{
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <div>안녕하세요.</div>
+    <span>안녕하세요.</span>
+    <h1>블록체인 수업</h1>
+    <h2>홈페이지 기초 수업</h2>
+    <hr>
+    <h1 id="a">HTML5</h1>
+    <h2 class="b">CSS</h2>
+    <form>
+        이름 : <input type="text"><br>
+        비밀번호 : <input type="password">
+    </form>
+    <hr>
+    <img src="./image/logo_daum.png" width="200" height="250">
+    <img src="./image/seoul.jpg" width="200" height="250">
+    <hr>
+    자동차 종류<br>
+    <div id="car">
+        <h1>현대</h1>
+        <div id="c">
+            <h1>소나타</h1>
+            <h1>아반떼</h1>
+        </div>
+    </div>
+    과일 종류><br>
+    <div id="fruit">
+        <h1>열대과일</h1>
+        <div>
+            <h1>바나나</h1>
+        </div>
+    </div>
+</body>
+</html>

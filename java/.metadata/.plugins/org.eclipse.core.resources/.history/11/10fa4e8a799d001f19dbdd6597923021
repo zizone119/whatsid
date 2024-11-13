@@ -1,0 +1,22 @@
+import java.sql.*;
+import java.util.*;
+
+public class BoardEx {
+
+	private Scanner sc = new Scanner(System.in);
+	private Connection conn;
+	Statement stmt;
+	ResultSet rs;
+	public BoardEx() {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+		} catch (Exception e) {
+			
+		}
+		
+	}
+	public static void main(String[] args) {
+		BoardEx b = new BoardEx();
+	}
+
+}

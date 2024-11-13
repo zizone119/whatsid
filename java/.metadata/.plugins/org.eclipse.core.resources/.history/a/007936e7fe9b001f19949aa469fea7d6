@@ -1,0 +1,64 @@
+package ch10;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+class PhoneList{
+	String Name;
+	int number;
+	public PhoneList(String name, int number) {
+		super();
+		Name = name;
+		this.number = number;
+	}
+	public String getName() {
+		return Name;
+	}
+	public void setName(String name) {
+		Name = name;
+	}
+	public int getNumber() {
+		return number;
+	}
+	public void setNumber(int number) {
+		this.number = number;
+	}
+}
+
+public class PhoneListEx {
+	private HashMap<String, Integer> phoneBook = new HashMap<String, Integer>();
+	Scanner sc = new Scanner(System.in);
+	private void read() {
+		System.out.print("인원수 >> ");
+		int n;
+		
+		n=sc.nextInt();
+		for(int i=0;i<n;i++) {
+			System.out.print("이름과 전화번호(이름과 번호는 빈칸없이 입력) >> ");
+			String name=sc.next();
+			int number=sc.nextInt();
+			this.phoneBook.put(name, number);
+		}
+		System.out.println(n+"명의 저장이 완료되었습니다.");
+	}
+	private void search() {
+		while(true) {
+			System.out.print("검색할 이름 : ");
+			Scanner sc = new Scanner(System.in);
+			String name = sc.next();
+			if(sc.equals("그만")) break;
+			else if(!(name==null)) {
+				
+				System.out.println(name+"의 전화번호는 "+this.phoneBook.get(name)+"입니다.");
+			}
+		}
+	}
+	private void run() {
+		read();
+		search();
+	}
+	public static void main(String[] args) {
+		new PhoneListEx().run();
+	}
+
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #circle{
+            width: 100px;
+            height: 100px;
+            background-color: lightcoral;
+            border-radius: 50%;
+            cursor: pointer;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="circle"></div>
+</body>
+<script>
+    {
+        setInterval(()=>{
+            const x=Math.random()*1024+'px';
+            const y=Math.random()*768+'px';
+            const size=Math.random()*100+'px';
+            const color=Math.round(Math.random()*0xffffff).toString(16);
+            const obj=document.querySelector('#circle');
+            obj.style.left=x;
+            obj.style.top=y;
+            obj.style.width=size;
+            obj.style.height=size;
+            obj.style.backgroundColor=`#${color}`;
+        },500)
+    }
+</script>
+</html>

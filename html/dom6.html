@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+           let counter=0;
+           let isConnect=false;
+           const h1=document.querySelector('h1');
+           const p=document.querySelector('p');
+           const connectButton=document.querySelector('#connect');
+           const disconnectButton=document.querySelector('#disconnect');
+           const listener=(event)=>{
+            h1.textContent=`Click count : ${++counter}`;
+           }
+           connectButton.addEventListener('click',()=>{
+            if(isConnect===false){
+                h1.addEventListener('click',listener);
+                p.textContent='Event is Connected';
+                isConnect=true;
+            }
+           });
+           disconnectButton.addEventListener('click',()=>{
+            if(isConnect===true){
+                h1.removeEventListener('click',listener);
+                p.textContent='Event is disConnected';
+                isConnect=false;
+            }
+           })
+        });
+    </script>
+    <style>
+        h1{
+            user-select: none;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Click count : 0</h1>
+    <button id="connect">Connect</button>
+    <button id="disconnect">disConnet</button>
+    <p>Event is disConnected</p>
+</body>
+</html>

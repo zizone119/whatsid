@@ -1,0 +1,30 @@
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.ArrayList;
+import java.util.List;
+
+public class ChatServer {
+	ServerSocket serverSocket;
+	Socket socket;
+	List<Thread> list;
+	public ChatServer() {
+		list = new ArrayList<Thread>();
+		System.out.println("Server started");
+	}
+	public void giveAndTake() {
+		try {
+			serverSocket = new ServerSocket(12345);
+			serverSocket.setReuseAddress(true);
+			while(true) {
+				socket = serverSocket.accept();
+				ServerSocketThread thread = new Serv
+			}
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+	public static void main(String[] args) {
+
+	}
+
+}
