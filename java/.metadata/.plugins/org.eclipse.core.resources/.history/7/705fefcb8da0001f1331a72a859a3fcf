@@ -1,9 +1,0 @@
-import java.net.InetAddress;
-import java.net.UnknownHostException;
-
-public class AddressTest {
-	public static void main(String[] args) throws Exception {
-		InetAddress ib = InetAddress.getByName("www.naver.com");
-		System.out.println("네이버 ip : "+ib);
-	}
-}
